@@ -1,0 +1,55 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["@typescript-eslint", "jest"],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "rules": {
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "class-methods-use-this": "off",
+        "react/prop-types": "off",
+        "spaced-comment": ["error", "always", {"markers": ["/"] }],
+        "arrow-body-style": "off",
+        "no-unused-expressions": ["error", { "allowTernary": true }],
+        "jest/no-focused-tests": "error",
+        "no-use-before-define": "off",
+        "no-shadow": "off",
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never",
+            "imports": "always-multiline",
+            "objects": "always-multiline"
+        }],
+        "indent": ["error", 4],
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "max-len": ["warn", {
+            "code": 120,
+            "ignoreComments": true
+        }],
+        "max-statements-per-line": "error",
+        "no-case-declarations": "warn",
+        "no-console": "off",
+        "no-multi-assign": "off",
+        "no-plusplus": "off",
+        "no-underscore-dangle": "off",
+        "quotes": ["error", "double", { "allowTemplateLiterals": true }]
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jest": true,
+        "jquery": true,
+        "node": true,
+        "webextensions": true
+    }
+}
